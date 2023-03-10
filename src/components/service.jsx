@@ -1,15 +1,33 @@
-import React from "react";
-import "./DescriptionAbout.css"
-function Service(){
-    return(
-        <div className="bloc_description">
-        <div className="TitleAbout">
-            <h2>Service</h2>
-            <i class="fa-sharp fa-solid fa-chevron-down ClickToShow"></i>
-        </div>
-        <p className="description_content">La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes.</p>
-         </div>
-     
-        )
-    }
+import React, { useState } from "react";
+import "./DescriptionAbout.css";
+
+function Service() {
+  const [showContent, setShowContent] = useState(false);
+
+  const handleToggle = () => {
+    setShowContent(!showContent);
+  };
+
+  return (
+    <div className="bloc_description">
+      <div className="TitleAbout" onClick={handleToggle}>
+        <h2>Service</h2>
+        {showContent ? (
+            <i className="fa-sharp fa-solid fa-chevron-down ClickToShow" />
+          
+        ) : (
+            <i className="fa-solid fa-chevron-up ClickToHide" />
+        )}
+      </div>
+      {showContent && (
+        <p className="description_content">
+          Les annonces postées sur Kasa garantissent une fiabilité totale. Les
+          photos sont conformes aux logements, et toutes les informations sont
+          régulièrement vérifiées par nos équipes.
+        </p>
+      )}
+    </div>
+  );
+}
+
 export default Service;

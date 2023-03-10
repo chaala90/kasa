@@ -21,6 +21,9 @@ Height:68px;
 .navbar a:hover{
     text-decoration: underline;
 }
+.navbar *:first-child{
+    margin-right: auto;
+}
 @media screen and (width <= 767px){
     .navbar{
 text-transform: uppercase;

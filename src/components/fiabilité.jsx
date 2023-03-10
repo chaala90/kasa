@@ -1,19 +1,33 @@
-import React from "react";
-import "./DescriptionAbout.css"
-/*import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {fachevronup} from '@fortawesome/free-solid-svg-icons'*/
-function Fiabilité(){
-    return(
+import React, { useState } from "react";
+import "./DescriptionAbout.css";
+
+function Fiabilité() {
+  const [showContent, setShowContent] = useState(false);
+
+  const handleToggle = () => {
+    setShowContent(!showContent);
+  };
+
+  return (
     <div className="bloc_description">
-    <div className="TitleAbout">
+      <div className="TitleAbout" onClick={handleToggle}>
         <h2>Fiabilité</h2>
-        <i class="fa-sharp fa-solid fa-chevron-down ClickToShow"></i>
-        <i class="fa-solid fa-chevron-up ClickToHide"></i>
-       
+        {showContent ? (
+              <i className="fa-sharp fa-solid fa-chevron-down ClickToShow" />
+          
+              ) : (
+                  <i className="fa-solid fa-chevron-up ClickToHide" />
+              )}
+      </div>
+      {showContent && (
+        <p className="description_content">
+          Les annonces postées sur Kasa garantissent une fiabilité totale. Les
+          photos sont conformes aux logements, et toutes les informations sont
+          régulièrement vérifiées par nos équipes.
+        </p>
+      )}
     </div>
-    <p className="description_content">Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes.</p>
-     </div>
- 
-    )
+  );
 }
+
 export default Fiabilité;

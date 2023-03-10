@@ -1,15 +1,33 @@
-import React from "react";
-import "./DescriptionAbout.css"
-function Respect(){
-    return(
-        <div className="bloc_description">
-        <div className="TitleAbout">
-            <h2>Respect</h2>
-            <i class="fa-sharp fa-solid fa-chevron-down ClickToShow"></i>
-        </div>
-        <p className="description_content">La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme.</p>
-         </div>
-     
-        )
-    }
+import React, { useState } from "react";
+import "./DescriptionAbout.css";
+
+function Respect() {
+  const [showContent, setShowContent] = useState(false);
+
+  const handleToggle = () => {
+    setShowContent(!showContent);
+  };
+
+  return (
+    <div className="bloc_description">
+      <div className="TitleAbout" onClick={handleToggle}>
+        <h2>Respect</h2>
+        {showContent ? (
+              <i className="fa-sharp fa-solid fa-chevron-down ClickToShow" />
+          
+              ) : (
+                  <i className="fa-solid fa-chevron-up ClickToHide" />
+              )}
+      </div>
+      {showContent && (
+        <p className="description_content">
+          Les annonces postées sur Kasa garantissent une fiabilité totale. Les
+          photos sont conformes aux logements, et toutes les informations sont
+          régulièrement vérifiées par nos équipes.
+        </p>
+      )}
+    </div>
+  );
+}
+
 export default Respect;

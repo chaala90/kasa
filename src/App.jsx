@@ -12,9 +12,10 @@ function App() {
     <div>
       <Navbar />
       <Routes>
+        
         <Route path='/accueil' element={<Accueil />}/>
         <Route path='/about' element={<About />}/>
-        <Route path='/404Page' element={<ErrorPage />}/>
+        <Route path='/' element={<ErrorPage />}/>
         
       </Routes>
       <Footer />
