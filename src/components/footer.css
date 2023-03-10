@@ -1,0 +1,14 @@
+.footer{
+    background-color: black;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.footer img{
+    width: 122px;
+    Height:39.44px;
+    margin-top: 15px;
+}

@@ -1,0 +1,34 @@
+.Appartement {
+    Width: 27%;
+    Height: 340px;
+    background: linear-gradient(to top, #863535, #FF6060);
+    border-radius: 1rem; 
+    margin: 1rem 1rem 1rem 2rem;
+    color:#ffff;
+    display: flex;
+    align-items: end;
+}
+.Appartement img{
+    
+}
+@media screen and (width <= 767px){
+    .Appartement{
+        width: 100%;
+        margin: 2rem 0px 0rem 0px;
+    }
+    .titre{
+        font-size: 18px;
+        width: 42%;
+        margin: 0 0 13px 10px;
+    }
+}
+@media only screen and (max-width: 400px) and (min-width : 768px){
+    .Appartement{
+    Width: 26%;
+    Height: 193px;
+    }
+    .titre{
+        font-size: 12px;
+}
+}
+ 

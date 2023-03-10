@@ -1,0 +1,23 @@
+/*@media only screen and (max-width : 1440px)*/
+.appartement__bloc{
+    background-color: #F6F6F6;
+    width: 100%;
+    border-radius: 2rem;
+    margin-top: 10rem;
+    margin-bottom: 13px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 768px) and (min-width : 992px){
+
+}
+@media only screen and (width <= 767px){
+    .appartement__bloc{
+        margin-top: 4rem;
+        background-color: none;
+        border-radius: 1rem;
+        align-items: center;
+
+    }
+}

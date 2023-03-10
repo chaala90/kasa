@@ -1,0 +1,42 @@
+.DescriptionAbout{
+   margin: 14rem auto 2rem; 
+   width: 90%;
+   font-family: "Montserrat", "sans serif";
+   font-weight: 400;
+   font-size: 24px;
+}
+
+/*.ClickToHide{
+    color: white;
+    font-weight: 900;
+}*/
+.ClickToHide{
+    display: none;
+}
+
+.TitleAbout {
+    color: #fff;
+    background-color: #ff6060;
+    height: 47px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 24px;
+    border-radius: 5px;
+    padding-left: 1rem;
+}
+.TitleAbout h2 {
+   /* font-size: 24px;*/
+    font-weight: 400;
+}
+.TitleAbout i{
+margin-right: 1rem;
+}
+.description_content {
+    color: #ff6060;
+    background-color: #f6f6f6;
+    font-size: 24px;
+    font-weight: 400;
+    margin-top: 0;
+    padding: 1rem;
+}
